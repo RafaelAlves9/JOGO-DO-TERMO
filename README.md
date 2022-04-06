@@ -2,4 +2,4 @@
  
 Recriação do jogo https://term.ooo/
 
-Acompanhe o desenvolvimento: rafaelalves9.github.io/JOGO-DO-TERMO
+Acompanhe o desenvolvimento: https://rafaelalves9.github.io/JOGO-DO-TERMO/
