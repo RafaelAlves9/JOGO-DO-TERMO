@@ -43,14 +43,41 @@ main{
 .find-word{
     width: 18%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #615458;
-    font-size: 32px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+input{
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 14px;
+    font-size: 27px;
+    color: #fff;
+    display: none;
+    background-color: #615458;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+input:focus{
+    background-color: #4C4347;
+    outline: 3px solid #000;
+}
+.atual .find-word{
+    border: 3px solid rgba(0, 0, 0, 0.61);
+}
+.atual input{
+    display: block;
+    background-color: #4C4347;
+}
+.verificado{
+    border: none;
+    display: block;
+}
+
+
+
+
+/*teclado*/
 #teclado{
     margin-top: 10px;
     width: 100%;
