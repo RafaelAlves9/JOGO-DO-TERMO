@@ -19,43 +19,65 @@ const numberSelected = randomNumber(0,99);
 const wordSelected = wordList[numberSelected];
 
 //referência de cada letra da palavra sorteada
-const randon1 = wordSelected.substring(0,1).toUpperCase();
-const randon2 = wordSelected.substring(1,2).toUpperCase();
-const randon3 = wordSelected.substring(2,3).toUpperCase();
-const randon4 = wordSelected.substring(3,4).toUpperCase();
-const randon5 = wordSelected.substring(4,5).toUpperCase();
-
-//fileiras da tentativas atual
-const atual = select('.atual');
-
-// const letra1 = atual.children[0].value
-// const letra2 = atual.children[1].value
-// const letra3 = atual.children[2].value
-// const letra4 = atual.children[3].value
-// const letra5 = atual.children[4].value
+const randon1 = wordSelected.substring(0,1);
+const randon2 = wordSelected.substring(1,2);
+const randon3 = wordSelected.substring(2,3);
+const randon4 = wordSelected.substring(3,4);
+const randon5 = wordSelected.substring(4,5);
 
 //variável responsável por verificar a tentativa atual
-let tentativaAtual = 'line2';
-// atualizando a tentativa atual
-// function verifiquedLine(){
-//     if(tentativaAtual == 'line2'){
-//         selects('#line').classList.remove('atual');
-//         select('#tentativa2').classList.add('atual');
-//     }else if(tentativaAtual === 'line3'){
-//         selects('#line').classList.remove('atual');
-//         select('#tentativa3').classList.add('atual');
-//     }else if(tentativaAtual === 'line4'){
-//         selects('#line').classList.remove('atual');
-//         select('#tentativa4').classList.add('atual');
-//     }else if(tentativaAtual === 'line5'){
-//         selects('#line').classList.remove('atual');
-//         select('#tentativa5').classList.add('atual');
-//     }else if(tentativaAtual === 'line6'){
-//         selects('#line').classList.remove('atual');
-//         select('#tentativa6').classList.add('atual');
-//     }else {
-//         select('#tentativa1').classList.add('atual');
-//     }
-// };
-// verifiquedLine();
-console.log(document.querySelector('#tentativas').children[0].classList)
+var tentativaAtual = 'line2';
+
+//atualizando a tentativa atual
+if(tentativaAtual === 'line1'){
+    select('#tentativa1').classList.add('atual');
+}else if(tentativaAtual === 'line2'){
+    select('#tentativa1').classList.remove('atual');
+    select('#tentativa2').classList.add('atual');
+}else if(tentativaAtual === 'line3'){
+    select('.tentativa2').classList.remove('atual');
+    select('.tentativa3').classList.add('atual');
+}else if(tentativaAtual === 'line4'){
+    select('.tentativa3').classList.remove('atual');
+    select('.tentativa4').classList.add('atual');
+}else if(tentativaAtual === 'line5'){
+    select('#tentativa4').classList.remove('atual');
+    select('.tentativa5').classList.add('atual');
+}else if(tentativaAtual === 'line6'){
+    select('.tentativa5').classList.remove('atual');
+    select('.tentativa6').classList.add('atual');
+}
+
+//letras da tentativa atual
+var letra1;
+var letra2;
+var letra3;
+var letra4;
+var letra5;
+
+select('.atual .letter1 input').addEventListener('change', e =>{
+    letra1 = select('.atual .letter1 input').value
+})
+select('.atual .letter2 input').addEventListener('change', e =>{
+    letra2 = select('.atual .letter2 input').value
+})
+select('.atual .letter3 input').addEventListener('change', e =>{
+    letra3 = select('.atual .letter3 input').value
+})
+select('.atual .letter4 input').addEventListener('change', e =>{
+    letra4 = select('.atual .letter4 input').value
+})
+select('.atual .letter5 input').addEventListener('change', e =>{
+    letra5 = select('.atual .letter5 input').value
+})
+
+function validationChance(){
+    if(letra1 === randon1){
+        console.log('aaaaaaaaa')
+    }else console.log(letra1)
+}
+
+//botão enviar
+select('#enter').addEventListener('click', e =>{
+    validationChance()
+})
