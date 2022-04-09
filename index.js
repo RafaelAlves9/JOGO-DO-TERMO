@@ -26,7 +26,7 @@ const randon4 = wordSelected.substring(3,4);
 const randon5 = wordSelected.substring(4,5);
 
 //variável responsável por verificar a tentativa atual
-var tentativaAtual = 'line2';
+var tentativaAtual = 'line1';
 
 //atualizando a tentativa atual
 if(tentativaAtual === 'line1'){
@@ -71,10 +71,14 @@ select('.atual .letter5 input').addEventListener('change', e =>{
     letra5 = select('.atual .letter5 input').value
 })
 
-function validationChance(){
+function validationLettler1(){
     if(letra1 === randon1){
-        console.log('aaaaaaaaa')
-    }else console.log(letra1)
+        this.document.querySelector('.atual .letter1').classList.add('correto')
+     } else console.log(randon1)
+}
+
+function validationChance(){
+    validationLettler1()
 }
 
 //botão enviar
